@@ -100,10 +100,10 @@ def save_message():
                 delayed(1, send_warning, [contract_id, situation["text"]])
                 break
 
-    return "ok"
+    return "ok"c
 
 
 if not DEBUG:
-    app.run(port='9092', host='0.0.0.0', ssl_context=SSL)
+    app.run(port='9093', host='0.0.0.0', ssl_context=SSL)
 else:
-    app.run(port='9092', host='0.0.0.0')
+    app.run(port='9093', host='0.0.0.0')
