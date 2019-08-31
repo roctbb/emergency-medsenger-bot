@@ -100,7 +100,7 @@ def save_message():
                 delayed(1, send_warning, [contract_id, situation["text"]])
                 break
 
-    return "ok"c
+    return "ok"
 
 
 if not DEBUG:
