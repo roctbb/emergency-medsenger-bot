@@ -91,12 +91,15 @@ def save_message():
         return "<strong>Некорректный ключ доступа.</strong> Свяжитесь с технической поддержкой."
 
     text = data['message']['text'].replace('\n', ' ').lower()
+    print("Text:", text)
 
     for situation in situations:
         words = situation['words'].split(',')
+        print("words", words)
 
         for word in words:
             if word in text:
+                print("sending warning")
                 delayed(1, send_warning, [contract_id, situation["text"]])
                 break
 
