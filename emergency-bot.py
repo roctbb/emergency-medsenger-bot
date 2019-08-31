@@ -88,6 +88,7 @@ def save_message():
     contract_id = str(data['contract_id'])
 
     if key != APP_KEY:
+        print("wrong key", key, "!=", APP_KEY)
         return "<strong>Некорректный ключ доступа.</strong> Свяжитесь с технической поддержкой."
 
     text = data['message']['text'].replace('\n', ' ').lower()
